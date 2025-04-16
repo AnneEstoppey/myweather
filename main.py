@@ -10,7 +10,7 @@ def main():
         raise ValueError("Missing WEATHERSTACK_TOKEN in environment")
 
     client = WeatherClient(token)
-    city = "Oslo"
+    city = "Tananger"
     weather = client.get_weather(city)
     print(weather)
 
