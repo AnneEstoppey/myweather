@@ -4,4 +4,9 @@ version = "0.1.0"
 description = "Simple weather client using weatherstack API"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = ["requests", "python-dotenv"]
+dependencies = [
+    "requests", 
+    "python-dotenv", 
+    "pytest",
+    "pydantic"
+]
