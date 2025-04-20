@@ -10,6 +10,11 @@ class Location(BaseModel):
 class CurrentWeather(BaseModel):
     temperature: int
     weather_descriptions: List[str]
+    wind_speed: int
+    wind_degree: int
+    wind_dir: str
+    pressure: int
+    precip: float
 
 
 class WeatherResponse(BaseModel):
