@@ -108,6 +108,6 @@ uv run main.py --city Oslo
 ```
 Make sure your .env file contains a valid WEATHERSTACK_TOKEN
 
-The city name is currently hard-coded in main.py (e.g., "Tananger")
+If no city name is passed, the default city is "Tananger".
 
 
