@@ -102,5 +102,17 @@ def test_get_weather_http_error_handled(monkeypatch):
   Use `argparse` to allow passing the city as a command-line argument:
   ```bash
   python main.py --city Oslo
+  ```
+  
+### 🚀 Usage
+
+To run the weather client, use:
+
+```bash
+uv run main.py
+```
+Make sure your .env file contains a valid WEATHERSTACK_TOKEN
+
+The city name is currently hard-coded in main.py (e.g., "Tananger")
 
 
