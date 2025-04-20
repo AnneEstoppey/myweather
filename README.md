@@ -59,3 +59,48 @@ class Location(BaseModel):
 class WeatherResponse(BaseModel):
     location: Location
     current: CurrentWeather
+```
+
+### 🧪 Unit Testing with `pytest`
+
+Unit tests are located in the `tests/` folder and use `pytest` for simple testing of the `WeatherClient`.
+
+- `monkeypatch` is used to **mock** the `requests.get` call
+- The test checks both:
+  - Successful weather response
+  - Handling of HTTP errors
+
+#### ✅ Example test (`tests/test_client.py`)
+
+```python
+def fake_get_error(*args, **kwargs):
+    class FakeResponse:
+        def raise_for_status(self):
+            raise requests.exceptions.HTTPError("401 Client Error: Unauthorized")
+    return FakeResponse()
+
+def test_get_weather_http_error_handled(monkeypatch):
+    import requests
+    monkeypatch.setattr(requests, "get", fake_get_error)
+
+    client = WeatherClient(token="invalid")
+    result = client.get_weather("Oslo")
+
+    assert result is None
+```
+
+### ✅ Future Ideas
+
+- [ ] **Expand Pydantic models**  
+  Add support for more fields from the API, such as:
+  - Wind speed
+  - Humidity
+  - "Feels like" temperature
+  - Moon phase, visibility, etc.
+
+- [ ] **Add a CLI interface**  
+  Use `argparse` to allow passing the city as a command-line argument:
+  ```bash
+  python main.py --city Oslo
+
+
