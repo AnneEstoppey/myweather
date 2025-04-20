@@ -93,10 +93,11 @@ def test_get_weather_http_error_handled(monkeypatch):
 
 - [ ] **Expand Pydantic models**  
   Add support for more fields from the API, such as:
-  - Wind speed
   - Humidity
   - "Feels like" temperature
   - Moon phase, visibility, etc.
+     
+- [ ] replace argparse with something fancier (like typer, which is based on Pydantic too).
   
 ### 🚀 Usage
 
