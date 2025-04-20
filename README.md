@@ -97,19 +97,14 @@ def test_get_weather_http_error_handled(monkeypatch):
   - Humidity
   - "Feels like" temperature
   - Moon phase, visibility, etc.
-
-- [ ] **Add a CLI interface**  
-  Use `argparse` to allow passing the city as a command-line argument:
-  ```bash
-  python main.py --city Oslo
-  ```
   
 ### 🚀 Usage
 
+We added a CLI interface (with `argparse`) to allow passing the city as a command-line argument.
 To run the weather client, use:
 
 ```bash
-uv run main.py
+uv run main.py --city Oslo
 ```
 Make sure your .env file contains a valid WEATHERSTACK_TOKEN
 
