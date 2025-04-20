@@ -48,13 +48,13 @@ Defined in `myweather/models.py`:
 from pydantic import BaseModel
 from typing import List
 
-class CurrentWeather(BaseModel):
-    temperature: int
-    weather_descriptions: List[str]
-
 class Location(BaseModel):
     name: str
     country: str
+
+class CurrentWeather(BaseModel):
+    temperature: int
+    weather_descriptions: List[str]
 
 class WeatherResponse(BaseModel):
     location: Location
