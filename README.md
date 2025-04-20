@@ -107,8 +107,8 @@ To run the weather client, use:
 ```bash
 uv run main.py --city Oslo
 ```
-Make sure your .env file contains a valid WEATHERSTACK_TOKEN
-
-If no city name is passed, the default city is "Tananger".
+- Make sure your .env file contains a valid WEATHERSTACK_TOKEN.
+- If your city in a composed name, use double quotes, for example: "Los Angeles".
+- If no city name is passed, the default city is "Tananger".
 
 
