@@ -1,6 +1,6 @@
 ## 🧪 Weather Client Project — Summary
 
-This project is a simple Python weather client that fetches current weather data from the [WeatherStack API](https://weatherstack.com/) and models the response using **Pydantic**.
+This project is a simple Python weather client that fetches current weather data from the [WeatherStack API](https://weatherstack.com/) and models the response using **Pydantic**. In this project we also used [UV](https://docs.astral.sh/uv/).
 
 ### 🗂️ Project Structure
 
